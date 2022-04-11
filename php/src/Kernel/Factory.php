@@ -2,7 +2,6 @@
 
 namespace Alipay\EasySDK\Kernel;
 
-use Alipay\EasySDK\Security\TextRisk\Client as textRiskClient;
 use Alipay\EasySDK\Util\Generic\Client as genericClient;
 use Alipay\EasySDK\Util\AES\Client as aesClient;
 
@@ -81,21 +80,6 @@ class Factory
     public static function util()
     {
         return self::$util;
-    }
-}
-
-class Security
-{
-    private $kernel;
-
-    public function __construct($kernel)
-    {
-        $this->kernel = $kernel;
-    }
-
-    public function textRisk()
-    {
-        return new textRiskClient($this->kernel);
     }
 }
 
