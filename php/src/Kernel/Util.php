@@ -19,7 +19,8 @@ class Util
         return new genericClient($this->kernel);
     }
 
-    public function aes(){
+    public function aes()
+    {
         return new aesClient($this->kernel);
     }
 }
