@@ -2,7 +2,6 @@
 
 namespace Alipay\EasySDK\Kernel;
 
-use Alipay\EasySDK\Member\Identification\Client as identificationClient;
 use Alipay\EasySDK\Payment\App\Client as appClient;
 use Alipay\EasySDK\Payment\Common\Client as commonClient;
 use Alipay\EasySDK\Payment\FaceToFace\Client as faceToFaceClient;
@@ -88,21 +87,6 @@ class Factory
     public static function util()
     {
         return self::$util;
-    }
-}
-
-class Member
-{
-    private $kernel;
-
-    public function __construct($kernel)
-    {
-        $this->kernel = $kernel;
-    }
-
-    public function identification()
-    {
-        return new identificationClient($this->kernel);
     }
 }
 
