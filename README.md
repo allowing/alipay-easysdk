@@ -1,3 +1,7 @@
+__请注意，这不是支付宝官方团队的代码库，这是从官方库 fork 出来的，去掉了非 php 的代码，并精简了没用上的 composer 包。__
+
+__如果官方团队认为该代码库侵权了，随时联系删除。__
+
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Falipay%2Falipay-easysdk.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Falipay%2Falipay-easysdk?ref=badge_shield)
 [![Maven Central](https://img.shields.io/maven-central/v/com.alipay.sdk/alipay-easysdk.svg)](https://mvnrepository.com/artifact/com.alipay.sdk/alipay-easysdk)
 [![NuGet](https://badge.fury.io/nu/AlipayEasySDK.svg)](https://badge.fury.io/nu/AlipayEasySDK)
