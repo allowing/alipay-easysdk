@@ -2,10 +2,6 @@
 
 namespace Alipay\EasySDK\Kernel;
 
-use Alipay\EasySDK\Base\Image\Client as imageClient;
-use Alipay\EasySDK\Base\OAuth\Client as oauthClient;
-use Alipay\EasySDK\Base\Qrcode\Client as qrcodeClient;
-use Alipay\EasySDK\Base\Video\Client as videoClient;
 use Alipay\EasySDK\Marketing\OpenLife\Client as openLifeClient;
 use Alipay\EasySDK\Marketing\Pass\Client as passClient;
 use Alipay\EasySDK\Marketing\TemplateMessage\Client as templateMessageClient;
@@ -95,37 +91,6 @@ class Factory
     public static function util()
     {
         return self::$util;
-    }
-}
-
-
-class Base
-{
-    private $kernel;
-
-    public function __construct($kernel)
-    {
-        $this->kernel = $kernel;
-    }
-
-    public function image()
-    {
-        return new imageClient($this->kernel);
-    }
-
-    public function oauth()
-    {
-        return new oauthClient($this->kernel);
-    }
-
-    public function qrcode()
-    {
-        return new qrcodeClient($this->kernel);
-    }
-
-    public function video()
-    {
-        return new videoClient($this->kernel);
     }
 }
 
