@@ -29,20 +29,20 @@ class Factory
         }
 
         $kernel = new EasySDKKernel($config);
-        self::$base = new Base($kernel);
-        self::$marketing = new Marketing($kernel);
-        self::$member = new Member($kernel);
-        self::$payment = new Payment($kernel);
-        self::$security = new Security($kernel);
-        self::$util = new Util($kernel);
+        static::$base = new Base($kernel);
+        static::$marketing = new Marketing($kernel);
+        static::$member = new Member($kernel);
+        static::$payment = new Payment($kernel);
+        static::$security = new Security($kernel);
+        static::$util = new Util($kernel);
     }
 
     public static function setOptions($config)
     {
-        if (!(self::$instance instanceof self)) {
-            self::$instance = new self($config);
+        if (!(static::$instance instanceof self)) {
+            static::$instance = new self($config);
         }
-        return self::$instance;
+        return static::$instance;
     }
 
     private function __clone()
@@ -51,31 +51,31 @@ class Factory
 
     public static function base()
     {
-        return self::$base;
+        return static::$base;
     }
 
     public static function marketing()
     {
-        return self::$marketing;
+        return static::$marketing;
     }
 
     public static function member()
     {
-        return self::$member;
+        return static::$member;
     }
 
     public static function payment()
     {
-        return self::$payment;
+        return static::$payment;
     }
 
     public static function security()
     {
-        return self::$security;
+        return static::$security;
     }
 
     public static function util()
     {
-        return self::$util;
+        return static::$util;
     }
 }
