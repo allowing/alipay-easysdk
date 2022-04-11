@@ -2,8 +2,8 @@
 
 namespace Alipay\EasySDK\Kernel;
 
-use Alipay\EasySDK\Util\Generic\Client as genericClient;
-use Alipay\EasySDK\Util\AES\Client as aesClient;
+use Alipay\EasySDK\Util\Generic\Client as GenericClient;
+use Alipay\EasySDK\Util\AES\Client as AesClient;
 
 class Util
 {
@@ -16,11 +16,11 @@ class Util
 
     public function generic()
     {
-        return new genericClient($this->kernel);
+        return new GenericClient($this->kernel);
     }
 
     public function aes()
     {
-        return new aesClient($this->kernel);
+        return new AesClient($this->kernel);
     }
 }

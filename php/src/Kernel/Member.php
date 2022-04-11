@@ -2,7 +2,7 @@
 
 namespace Alipay\EasySDK\Kernel;
 
-use Alipay\EasySDK\Member\Identification\Client as identificationClient;
+use Alipay\EasySDK\Member\Identification\Client as IdentificationClient;
 
 class Member
 {
@@ -15,6 +15,6 @@ class Member
 
     public function identification()
     {
-        return new identificationClient($this->kernel);
+        return new IdentificationClient($this->kernel);
     }
 }

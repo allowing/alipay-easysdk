@@ -2,7 +2,7 @@
 
 namespace Alipay\EasySDK\Kernel;
 
-use Alipay\EasySDK\Security\TextRisk\Client as textRiskClient;
+use Alipay\EasySDK\Security\TextRisk\Client as TextRiskClient;
 
 class Security
 {
@@ -15,6 +15,6 @@ class Security
 
     public function textRisk()
     {
-        return new textRiskClient($this->kernel);
+        return new TextRiskClient($this->kernel);
     }
 }

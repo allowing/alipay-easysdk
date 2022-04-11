@@ -2,9 +2,9 @@
 
 namespace Alipay\EasySDK\Kernel;
 
-use Alipay\EasySDK\Marketing\OpenLife\Client as openLifeClient;
-use Alipay\EasySDK\Marketing\Pass\Client as passClient;
-use Alipay\EasySDK\Marketing\TemplateMessage\Client as templateMessageClient;
+use Alipay\EasySDK\Marketing\OpenLife\Client as OpenLifeClient;
+use Alipay\EasySDK\Marketing\Pass\Client as PassClient;
+use Alipay\EasySDK\Marketing\TemplateMessage\Client as TemplateMessageClient;
 
 class Marketing
 {
@@ -17,16 +17,16 @@ class Marketing
 
     public function openLife()
     {
-        return new openLifeClient($this->kernel);
+        return new OpenLifeClient($this->kernel);
     }
 
     public function pass()
     {
-        return new passClient($this->kernel);
+        return new PassClient($this->kernel);
     }
 
     public function templateMessage()
     {
-        return new templateMessageClient($this->kernel);
+        return new TemplateMessageClient($this->kernel);
     }
 }

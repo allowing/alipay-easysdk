@@ -2,10 +2,10 @@
 
 namespace Alipay\EasySDK\Kernel;
 
-use Alipay\EasySDK\Base\Image\Client as imageClient;
-use Alipay\EasySDK\Base\OAuth\Client as oauthClient;
-use Alipay\EasySDK\Base\Qrcode\Client as qrcodeClient;
-use Alipay\EasySDK\Base\Video\Client as videoClient;
+use Alipay\EasySDK\Base\Image\Client as ImageClient;
+use Alipay\EasySDK\Base\OAuth\Client as OauthClient;
+use Alipay\EasySDK\Base\Qrcode\Client as QrcodeClient;
+use Alipay\EasySDK\Base\Video\Client as VideoClient;
 
 class Base
 {
@@ -18,21 +18,21 @@ class Base
 
     public function image()
     {
-        return new imageClient($this->kernel);
+        return new ImageClient($this->kernel);
     }
 
     public function oauth()
     {
-        return new oauthClient($this->kernel);
+        return new OauthClient($this->kernel);
     }
 
     public function qrcode()
     {
-        return new qrcodeClient($this->kernel);
+        return new QrcodeClient($this->kernel);
     }
 
     public function video()
     {
-        return new videoClient($this->kernel);
+        return new VideoClient($this->kernel);
     }
 }

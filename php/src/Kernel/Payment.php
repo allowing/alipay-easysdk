@@ -2,12 +2,12 @@
 
 namespace Alipay\EasySDK\Kernel;
 
-use Alipay\EasySDK\Payment\App\Client as appClient;
-use Alipay\EasySDK\Payment\Common\Client as commonClient;
-use Alipay\EasySDK\Payment\FaceToFace\Client as faceToFaceClient;
-use Alipay\EasySDK\Payment\Huabei\Client as huabeiClient;
-use Alipay\EasySDK\Payment\Page\Client as pageClient;
-use Alipay\EasySDK\Payment\Wap\Client as wapClient;
+use Alipay\EasySDK\Payment\App\Client as AppClient;
+use Alipay\EasySDK\Payment\Common\Client as CommonClient;
+use Alipay\EasySDK\Payment\FaceToFace\Client as FaceToFaceClient;
+use Alipay\EasySDK\Payment\Huabei\Client as HuabeiClient;
+use Alipay\EasySDK\Payment\Page\Client as PageClient;
+use Alipay\EasySDK\Payment\Wap\Client as WapClient;
 
 class Payment
 {
@@ -20,31 +20,31 @@ class Payment
 
     public function app()
     {
-        return new appClient($this->kernel);
+        return new AppClient($this->kernel);
     }
 
     public function common()
     {
-        return new commonClient($this->kernel);
+        return new CommonClient($this->kernel);
     }
 
     public function faceToFace()
     {
-        return new faceToFaceClient($this->kernel);
+        return new FaceToFaceClient($this->kernel);
     }
 
     public function huabei()
     {
-        return new huabeiClient($this->kernel);
+        return new HuabeiClient($this->kernel);
     }
 
     public function page()
     {
-        return new pageClient($this->kernel);
+        return new PageClient($this->kernel);
     }
 
     public function wap()
     {
-        return new wapClient($this->kernel);
+        return new WapClient($this->kernel);
     }
 }
