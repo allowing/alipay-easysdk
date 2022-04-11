@@ -32,7 +32,7 @@ class TradeSettleInfo extends Model {
      * @return TradeSettleInfo
      */
     public static function fromMap($map = []) {
-        $model = new self();
+        $model = new static();
         if(isset($map['trade_settle_detail_list'])){
             if(!empty($map['trade_settle_detail_list'])){
                 $model->tradeSettleDetailList = [];

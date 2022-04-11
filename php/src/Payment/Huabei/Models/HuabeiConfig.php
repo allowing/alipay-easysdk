@@ -29,7 +29,7 @@ class HuabeiConfig extends Model {
      * @return HuabeiConfig
      */
     public static function fromMap($map = []) {
-        $model = new self();
+        $model = new static();
         if(isset($map['hb_fq_num'])){
             $model->hbFqNum = $map['hb_fq_num'];
         }

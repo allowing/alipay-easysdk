@@ -49,7 +49,7 @@ class TradeSettleDetail extends Model {
      * @return TradeSettleDetail
      */
     public static function fromMap($map = []) {
-        $model = new self();
+        $model = new static();
         if(isset($map['operation_type'])){
             $model->operationType = $map['operation_type'];
         }

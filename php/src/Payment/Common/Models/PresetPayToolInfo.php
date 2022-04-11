@@ -29,7 +29,7 @@ class PresetPayToolInfo extends Model {
      * @return PresetPayToolInfo
      */
     public static function fromMap($map = []) {
-        $model = new self();
+        $model = new static();
         if(isset($map['amount'])){
             if(!empty($map['amount'])){
                 $model->amount = $map['amount'];

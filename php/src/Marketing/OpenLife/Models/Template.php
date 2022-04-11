@@ -31,7 +31,7 @@ class Template extends Model {
      * @return Template
      */
     public static function fromMap($map = []) {
-        $model = new self();
+        $model = new static();
         if(isset($map['template_id'])){
             $model->templateId = $map['template_id'];
         }

@@ -39,7 +39,7 @@ class TradeFundBill extends Model {
      * @return TradeFundBill
      */
     public static function fromMap($map = []) {
-        $model = new self();
+        $model = new static();
         if(isset($map['fund_channel'])){
             $model->fundChannel = $map['fund_channel'];
         }

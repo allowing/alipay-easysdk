@@ -24,7 +24,7 @@ class MerchantConfig extends Model {
      * @return MerchantConfig
      */
     public static function fromMap($map = []) {
-        $model = new self();
+        $model = new static();
         if(isset($map['return_url'])){
             $model->returnUrl = $map['return_url'];
         }

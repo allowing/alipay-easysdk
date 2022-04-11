@@ -41,7 +41,7 @@ class Article extends Model {
      * @return Article
      */
     public static function fromMap($map = []) {
-        $model = new self();
+        $model = new static();
         if(isset($map['title'])){
             $model->title = $map['title'];
         }

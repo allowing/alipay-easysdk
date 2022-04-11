@@ -29,7 +29,7 @@ class Keyword extends Model {
      * @return Keyword
      */
     public static function fromMap($map = []) {
-        $model = new self();
+        $model = new static();
         if(isset($map['color'])){
             $model->color = $map['color'];
         }

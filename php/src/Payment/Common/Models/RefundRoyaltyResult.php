@@ -54,7 +54,7 @@ class RefundRoyaltyResult extends Model {
      * @return RefundRoyaltyResult
      */
     public static function fromMap($map = []) {
-        $model = new self();
+        $model = new static();
         if(isset($map['refund_amount'])){
             $model->refundAmount = $map['refund_amount'];
         }

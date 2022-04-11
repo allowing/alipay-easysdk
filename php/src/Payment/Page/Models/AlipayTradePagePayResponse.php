@@ -24,7 +24,7 @@ class AlipayTradePagePayResponse extends Model {
      * @return AlipayTradePagePayResponse
      */
     public static function fromMap($map = []) {
-        $model = new self();
+        $model = new static();
         if(isset($map['body'])){
             $model->body = $map['body'];
         }

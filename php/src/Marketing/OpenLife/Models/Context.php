@@ -52,7 +52,7 @@ class Context extends Model {
      * @return Context
      */
     public static function fromMap($map = []) {
-        $model = new self();
+        $model = new static();
         if(isset($map['head_color'])){
             $model->headColor = $map['head_color'];
         }

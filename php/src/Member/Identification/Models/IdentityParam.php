@@ -39,7 +39,7 @@ class IdentityParam extends Model {
      * @return IdentityParam
      */
     public static function fromMap($map = []) {
-        $model = new self();
+        $model = new static();
         if(isset($map['identity_type'])){
             $model->identityType = $map['identity_type'];
         }

@@ -24,7 +24,7 @@ class AlipayTradeWapPayResponse extends Model {
      * @return AlipayTradeWapPayResponse
      */
     public static function fromMap($map = []) {
-        $model = new self();
+        $model = new static();
         if(isset($map['body'])){
             $model->body = $map['body'];
         }

@@ -74,7 +74,7 @@ class VoucherDetail extends Model {
      * @return VoucherDetail
      */
     public static function fromMap($map = []) {
-        $model = new self();
+        $model = new static();
         if(isset($map['id'])){
             $model->id = $map['id'];
         }

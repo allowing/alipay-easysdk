@@ -44,7 +44,7 @@ class MultipleFactory
 
     public static function setOptions($config)
     {
-        static::$instance = new self($config);
+        static::$instance = new static($config);
         return static::$instance;
     }
 
